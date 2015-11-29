@@ -14,7 +14,7 @@ export default class QueryBuilder {
 			let results = _.map(keyword, (value) => {
 				return this.startsWithSingular(value);
 			});
-			return _.every(results);
+			return _.some(results);
 		}
 	}
 	

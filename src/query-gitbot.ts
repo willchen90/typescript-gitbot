@@ -22,6 +22,7 @@ export default function queryGitbot(query: QueryBuilder): string {
 	if (queryHelper.topic("git add")) {
 		return Git.gitAdd();
 	}
+	
 	if (queryHelper.topic("git remove")) {
 		return Git.gitRemove();
 	}
