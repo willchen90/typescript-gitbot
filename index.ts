@@ -62,9 +62,6 @@ slack.on('message', function(message) {
   if (type === 'message' && (text != null) && (channel != null)) {
     response = gitbot(text);
     if (response.length) {
-       if (process.env.NODE_ENV === "development") {
-           return console.log("GITBOT:", response);
-       }
        channel.send(response);
        return console.log("@" + slack.self.name + " responded with \"" + response + "\"");
     }
