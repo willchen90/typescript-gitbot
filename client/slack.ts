@@ -1,5 +1,4 @@
-/// <reference path="typings/tsd.d.ts" />
-import gitbot from "./gitbot";
+import gitbot from "../src/gitbot";
 
 var Slack, autoMark, autoReconnect, slack, token;
 

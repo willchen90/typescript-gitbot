@@ -1,4 +1,4 @@
-import gitbot from "./gitbot";
+import gitbot from "../src/gitbot";
 let readline = require('readline');
 
 let rl = readline.createInterface({
