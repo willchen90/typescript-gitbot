@@ -1,6 +1,6 @@
 import queryGitbot from "./query-gitbot";
 import * as _ from "lodash";
-import Query from "./query";
+import QueryBuilder from "./query-builder";
 
 export default function gitbot(query: string): string {
 	const NO_RESPONSE="";
@@ -10,6 +10,5 @@ export default function gitbot(query: string): string {
 	}
 	queryWords.shift();
 	let queryString = queryWords.join(" ");
-	let queryInstance = new Query(queryString);
-	return queryGitbot(queryInstance);
+	return queryGitbot(new QueryBuilder(queryString));
 }

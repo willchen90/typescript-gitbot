@@ -1,5 +1,5 @@
 import * as _ from "lodash";
-export default class Query {
+export default class QueryBuilder {
 	
 	queryString: string;
 	

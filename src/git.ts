@@ -5,8 +5,8 @@ export default class Git {
 	static gitRemove = function () {
 		return "git remove allows you to remove files"
 	}
-	static gitPullVsRebase = function () {
-		return "I recommend this article by Atlassian: " +
+	static gitMergeVsRebase = function () {
+		return "In-depth article on using merge vs rebase for git pull by Atlassian: " +
 			   "https://www.atlassian.com/git/tutorials/merging-vs-rebasing/ \n"
 	}
 }	

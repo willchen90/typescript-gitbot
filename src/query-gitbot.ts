@@ -1,8 +1,8 @@
 import Git from "./git";
 import Error from "./error";
-import Query from "./query";
+import QueryBuilder from "./query-builder";
 
-export default function queryGitbot(query: Query): string {
+export default function queryGitbot(query: QueryBuilder): string {
 	
 	// Most strict 
 	if (query.startsWith("git add")) {
@@ -14,8 +14,9 @@ export default function queryGitbot(query: Query): string {
 	
 	// Less strict
 	if (query.includes(["rebase", "merge"])) {
-		return Git.gitPullVsRebase();
+		return Git.gitMergeVsRebase();
 	}
+	
 	// if (query.includes("git stash").and.not("pop")) {
 	// 	return Git.gitStash();
 	// }
