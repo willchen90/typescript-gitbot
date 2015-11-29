@@ -10,12 +10,13 @@
   "devDependencies": {
     "chai": "^3.4.1",
     "mocha": "^2.3.4",
-    "nodemon": "^1.8.1"
+    "nodemon": "^1.8.1",
+    "source-map-support": "^0.3.3"
   },
   "scripts": {
     "dev": "nodemon client/mock.js",
     "slack": "nodemon client/slack.js",
-    "test": "mocha -w"
+    "test": "mocha -w --require source-map-support/register test/**/*.test.js"
   },
   "author": "",
   "license": "ISC"
